@@ -103,7 +103,7 @@
 
 				<section>
 					<h2>string</h2>
-					<p>Cadenas dexto o caracteres contenidos entre comillas dobles o sencillas</p>
+					<p>Cadenas de texto de cero o más caracteres contenidos entre comillas dobles o sencillas</p>
 					<pre><code>var myString = "this class is awesome";
 log(myString);</code></pre>
 				</section>
@@ -160,6 +160,17 @@ log(myUndefined);</code></pre>
 					</ul>
 				</section>
 
+        <section>
+          <h2>Object</h2>
+          <ul>
+            <li>Es una colección de propiedades a las cuales les puedo asignar un valor.</li>
+            <li>Las propiedades son cadenas de texto</li>
+            <li>Los valores pueden ser primitivos u otros objetos</li>
+            <li>Pueden ser construidos usando {} o directamente el constructor <code class="inline">Object</code></li>
+            <li>Todo objeto tiene un valor primitivo y/o un valor string implícito</li>
+          </ul>
+        </section>
+
 				<section>
 					<h2>Object</h2>
 					<ul>
@@ -167,20 +178,99 @@ log(myUndefined);</code></pre>
 						<li>Las propiedades son cadenas de texto</li>
 						<li>Los valores pueden ser primitivos u otros objetos</li>
 						<li>Pueden ser construidos usando {} o directamente el constructor <code class="inline">Object</code></li>
-						<li>Todo objeto tiene un valor primitivo implícito</li>
+						<li>Todo objeto tiene un valor primitivo y/o un valor string implícito</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Object</h2>
-					<pre><code>var myUndefined;
-log(myUndefined);</code></pre>
+					<pre><code>var obj = {}; // objeto vacío
+var obj2 = {
+  name: 'Johnny Bravo', // string
+  age: 23, // number
+  active: false // boolean
+};
+</code></pre>
 				</section>
+
+        <section>
+          <h2>Object</h2>
+          <pre><code>var obj = new Object(); // objeto vacío, equivalente a {}
+
+var obj2 = new Object();
+
+obj2.name = 'Johnny Bravo'; // string
+obj2.age = 23; // number
+obj2.active = false; // boolean
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Nested Object</h2>
+          <pre><code>var obj3 = {
+  codename: 'JohnnyB', // string
+  data: { // object
+    realName: 'Johnny Bravo',
+    age: 23,
+    active: false
+  }  
+};
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Nested Object</h2>
+          <pre><code>obj3.codename;
+obj3.data.realName;
+obj3.data.age;
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Object Properties</h2>
+          <ul>
+            <li>constructor</li>
+            <li>prototype</li> 
+          </ul>
+        </section>
+
+        <section>
+          <h2>Object Methods</h2>
+          <ul>
+            <li>toString</li>
+            <li>valueOf</li>
+            <li>hasOwnProperty</li>
+          </ul>
+        </section>
 
 				<section>
 					<h2>String</h2>
-					<p></p>
+					<ul>
+            <li>Hereda del built-in <code class="inline">Object</code></li>
+            <li>Permite interactuar con cadenas de texto</li>
+            <li>Se puede usar como constructor o como función</li>
+          </ul>
 				</section>
+
+        <section>
+          <h2>String Properties</h2>
+          <ul>
+            <li>length</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>String Methods</h2>
+          <ul>
+            <li>indexOf</li>
+            <li>lastIndexOf</li>
+            <li>match</li>
+            <li>toUpperCase / toLowerCase</li>
+            <li>substring / substr</li>
+            <li>split</li>
+            <li>* trim</li>
+          </ul>
+        </section>
 			</div>
 
 			<!-- The navigational controls UI -->
