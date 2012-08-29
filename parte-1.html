@@ -271,6 +271,80 @@ obj3.data.age;
             <li>* trim</li>
           </ul>
         </section>
+
+        <section>
+          <h3>indexOf</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet';
+test.indexOf('Lorem') // 0
+test.indexOf('d') // 12
+test.indexOf('vestibulum') // -1
+test.indexOf('lorem') // -1 sensiblea mayúsculas
+test.indexOf(/lorem/i) // 0 regexp
+</code></pre>
+        </section>
+
+        <section>
+          <h3>lastIndexOf</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet';
+test.lastIndexOf('amet') // 22
+test.lastIndexOf('m') // 23
+test.lastIndexOf('vestibulum') // -1
+test.lastIndexOf(/AMET/i) // 22 regexp
+</code></pre>
+        </section>
+
+        <section>
+          <h3>match</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet lorem';
+test.match('amet') // ['amet']
+test.match('lorem') // ['lorem']
+test.match(/lorem/i) // ['Lorem'] regexp
+test.match(/lorem/ig) // ['Lorem', 'lorem']
+</code></pre>
+        </section>
+
+        <section>
+          <h3>toUpperCase / toLowerCase</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit AMET';
+test.toUpperCase() // 'LOREM IPSUM DOLOR SIT AMET'
+test.toLowerCase() // 'lorem ipsum dolor sit amet'
+</code></pre>
+        </section>
+
+        <section>
+          <h3>substring / substr</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet';
+test.substring(0,5) // 'Lorem'
+test.substring(11,6) // 'ipsum'
+test.substring(11,-90) // 'Lorem ipsum'
+test.substring(0,0) // ''
+test.substr(0,5) // 'Lorem'
+test.substr(11,6) // ' dolor'
+test.substr(11,-1) // ''
+test.substr(0,0) // ''
+</code></pre>
+        </section>
+
+        <section>
+          <h3>split</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet';
+test.split('m') // ['Lore', ' ipsu', ' dolor sit a', 'et']
+test.split('ipsum') // ['Lorem ', ' dolor sit amet']
+
+test = 'lunes,martes,miércoles,jueves,viernes'
+test.split(',') // ['lunes', 'martes', 'miércoles', 'jueves', 'viernes']
+</code></pre>
+
+        <section>
+          <h3>trim</h3>
+          <pre><code>var test = ' hola     ';
+test.trim() // 'hola'
+
+test = ' hola      mundo  ';
+test.trim() // 'hola      mundo'
+</code></pre>
+        </section>
+
 			</div>
 
 			<!-- The navigational controls UI -->
