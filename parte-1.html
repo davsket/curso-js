@@ -243,14 +243,25 @@ obj3.data.age;
           </ul>
         </section>
 
-				<section>
-					<h2>String</h2>
-					<ul>
-            <li>Hereda del built-in <code class="inline">Object</code></li>
-            <li>Permite interactuar con cadenas de texto</li>
-            <li>Se puede usar como constructor o como función</li>
-          </ul>
-				</section>
+		<section>
+			<h2>String</h2>
+			<ul>
+				<li>Hereda del built-in <code class="inline">Object</code></li>
+				<li>Permite interactuar con cadenas de texto</li>
+				<li>Se puede usar como constructor o como función</li>
+			</ul>
+		</section>
+
+		<section>
+          <h3>Function vs Constructor</h3>
+          <pre><code>var test = 'Lorem ipsum dolor sit amet',
+    test2 = new String(' vestibulum letaher')
+
+typeof test // "string"
+typeof test2 // "object"
+
+log(test + test2)</code></pre>
+        </section>
 
         <section>
           <h2>String Properties</h2>
@@ -345,6 +356,202 @@ test = ' hola      mundo  '
 test.trim() // 'hola      mundo'
 </code></pre>
         </section>
+
+		<section>
+			<h2>Number</h2>
+			<ul>
+				<li>Hereda del built-in <code class="inline">Object</code></li>
+				<li>Permite interactuar con números enteros o flotantes</li>
+				<li>Se puede usar como constructor o como función</li>
+			</ul>
+		</section>
+
+		<section>
+          <h3>Function vs Constructor</h3>
+          <pre><code>var test = 25,
+    test2 = new Number(75)
+
+typeof test // "number"
+typeof test2 // "object"
+
+log(test + test2)</code></pre>
+        </section>
+
+
+		<section>
+			<h2>Number Methods</h2>
+			<ul>
+				<li>toFixed</li>
+				<li>toPrecision</li>
+				<li>toExponential</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>toFixed</h3>
+          <pre><code>var test = 25.321
+test.toFixed() // "25"
+test.toFixed(0) // "25"
+test.toFixed(2) // "25.32"
+test.toFixed(5) // "25.32100"
+</code></pre>
+		</section>
+
+		<section>
+			<h3>toPrecision</h3>
+          <pre><code>var test = 25.321
+test.toPrecision() // "25.321"
+test.toPrecision(0) // RangeError: toPrecision() argument must be between 1 and 21
+test.toPrecision(1) // "3e+1"
+test.toPrecision(2) // "25"
+test.toPrecision(7) // "25.32100"
+</code></pre>
+		</section>
+
+		<section>
+			<h3>toExponential</h3>
+          <pre><code>var test = 25.321
+test.toExponential() // "2.5321e+1"
+test.toExponential(0) // "3e+1"
+test.toExponential(1) // "2.5e+1"
+test.toExponential(7) // "2.5321000e+1"
+</code></pre>
+		</section>
+
+		<section>
+			<h2>Array</h2>
+			<ul>
+				<li>Hereda del built-in <code class="inline">Object</code></li>
+				<li>Permite interactuar con arreglos</li>
+				<li>Permite contener elementos de diferentes tipos</li>
+				<li>Se puede usar como constructor o como función</li>
+			</ul>
+		</section>
+
+		<section>
+          <h3>Function vs Constructor</h3>
+          <pre><code>var test = [1,2,3], // [1,2,3]
+    test2 = Array(1,2,3), // [1,2,3]
+    test3 = new Array(1,2,3) // [1,2,3]
+</code></pre>
+        </section>
+
+        <section>
+          <h2>Array Properties</h2>
+          <ul>
+            <li>length</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Array Methods</h2>
+          <ul>
+            <li>pop</li>
+            <li>push</li>
+            <li>shift</li>
+            <li>unshift</li>
+            <li>* indexOf</li>
+            <li>* lastIndexOf</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Array Methods</h2>
+          <ul>
+            <li>concat</li>
+            <li>join</li>
+            <li>slice</li>
+            <li>sort</li>
+            <li>splice</li>
+          </ul>
+        </section>
+
+		<section>
+			<h3>pop &amp; push</h3>
+          <pre><code>var test = [1,2,3]
+test.pop() // 3
+log(test)
+test.push(4) // 3 (el nuevo tamaño)
+log(test)
+test.push([5,6]) // 4 (el nuevo tamaño)
+log(test)
+</code></pre>
+		</section>
+
+		<section>
+			<h3>shift &amp; unshift</h3>
+          <pre><code>var test = [1,2,3]
+test.shift() // 1
+log(test)
+test.unshift(4) // 3 (el nuevo tamaño)
+log(test)
+test.unshift([5,6]) // 4 (el nuevo tamaño)
+log(test)
+</code></pre>
+		</section>
+
+		<section>
+			<h3>indexOf</h3>
+          <pre><code>var test = [1,2,3,4]
+test.indexOf(3) // 2
+test.indexOf(15) // -1
+</code></pre>
+		</section>
+
+		<section>
+			<h3>lastIndexOf</h3>
+          <pre><code>var test = [1,2,3,4,3]
+test.lastIndexOf(3) // 4
+test.lastIndexOf(15) // -1
+</code></pre>
+		</section>
+
+		<section>
+			<h3>concat</h3>
+          <pre><code>var test = [1,2,3,4],
+    test2 = [5,6,7]
+test.concat() // [1,2,3,4]
+test.concat(test2) // [1,2,3,4,5,6,7]
+log(test)
+log(test2)
+</code></pre>
+		</section>
+
+		<section>
+			<h3>join</h3>
+          <pre><code>var test = [1,2,3,4]
+test.join() // "1,2,3,4"
+test.join('') // "1234"
+test.join('-') // "1-2-3-4"
+log(test)
+</code></pre>
+		</section>
+
+		<section>
+			<h3>slice</h3>
+          <pre><code>var test = [1,2,3,4,5]
+test.slice() // [1,2,3,4,5]
+test.slice(2) // [4,5]
+test.slice(1,3) // [2,3,4]
+log(test)
+</code></pre>
+		</section>
+
+		<section>
+			<h3>splice</h3>
+          <pre><code>var test = [1,2,3,4,5]
+test.splice() // []
+log(test)
+test.splice(0,1) // [1]
+log(test)
+test.splice(0,0,1) // []
+log(test)
+test.splice(4,0,5,6,7,8) // []
+log(test)
+test.splice(4,test.length,10,11) // [5, 6, 7, 8, 5]
+log(test)
+</code></pre>
+		</section>
 
 			</div>
 
