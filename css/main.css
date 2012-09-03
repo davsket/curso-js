@@ -213,6 +213,7 @@ body {
 .reveal code {
 	font-family: monospace;
 	overflow-x: auto;
+	line-height: 1.5em;
 }
 .reveal code.inline{
 	margin: 0 2px;
